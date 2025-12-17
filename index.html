@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="style.css">
+
+    <!--Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+
+
+    <title>Form</title>
+</head>
+<body>
+    <main>
+        <form>
+            <h1>Formulário de contato</h1>
+            <hr>
+            <fieldset>
+                <legend>Dados Pessoais</legend>
+
+            <div>
+                <label for="nome">Nome:</label>
+                <input type="text" name="nome" id="nome">
+            </div>    
+                
+            <div>
+                <label for="sobrenome">Sobrenome:</label>
+                <input type="text" name="sobrenome" id="sobrenome">
+            </div>
+            </fieldset>
+            
+            <fieldset>
+                <legend>Contato</legend>
+
+                <div>
+                    <label for="email">email:</label>
+                    <input type="email" name="email" id="email">
+                </div>  
+            
+                <div>
+                    <label for="celular">Celular:</label>
+                    <input type="tel" name="celular" id="celular">
+                </div>
+            </fieldset>    
+                
+            
+            <fieldset>
+                <legend>Mensagem</legend>
+                <div>
+                    <label for="mensagem">Mensagem:</label>
+                    <input type="text" name="mensagem" id="mensagem">
+                </div>
+            </fieldset>
+            
+            <button type="submit">Enviar</button>
+        </form>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>

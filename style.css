@@ -28,13 +28,13 @@ h1 {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
+    justify-content: space-between;
 }
-
-
 
 .form {
     background-color: var(--white);
     width: clamp(300px, 80%, 700px);
+    max-height: 900px;
     padding: 4rem;
     border-radius: 10px;
     margin: 0 auto;
@@ -64,7 +64,7 @@ hr {
 }
 
 .form__box input {
-    width: clamp(200px, 40%, 230px);
+    width: clamp(250px, 100%, 260px);
     height: 50px;
     border-radius: 10px;
     border-color: var(--dark-purple);
@@ -90,3 +90,9 @@ hr {
     cursor: pointer;
 
 }
+
+.form:nth-child(3){
+    flex-direction: row;
+}
+
+

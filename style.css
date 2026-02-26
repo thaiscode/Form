@@ -95,4 +95,12 @@ hr {
     flex-direction: row;
 }
 
-
+@media screen and (max-width: 768px){
+    .form h1 {
+        text-align: center;
+    }
+    
+    .form {
+        padding: 1.5rem;
+    }
+}

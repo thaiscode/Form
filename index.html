@@ -24,12 +24,14 @@
 
             <div class="form__box">
                 <label for="nome">Nome*</label>
-                <input type="text" name="nome" id="nome"   placeholder="Insira aqui seu nome." minlength="3">
+                <input type="text" name="nome" id="nome" required  placeholder="Insira aqui seu nome." minlength="3">
+                <p class="mensagem-erro"></p>
             </div>    
                 
             <div class="form__box">
                 <label for="sobrenome">Sobrenome*</label>
                 <input type="text" name="sobrenome" id="sobrenome" required  placeholder="Insira aqui seu sobrenome." minlength="3">
+                <p class="mensagem-erro"></p>
             </div>
             </fieldset>
             
@@ -38,7 +40,8 @@
 
                 <div class="form__box">
                     <label for="email">Email*</label>
-                    <input type="email" name="email" id="email" required placeholder="email@email.com" pattern="^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9-]+(\.[a-zA-Z0-9-]+)+$">
+                    <input type="email" name="email" id="email" required placeholder="email@email.com">
+                    <p class="mensagem-erro"></p>
                 </div>  
             
                 <div class="form__box">
@@ -51,12 +54,13 @@
             <fieldset>
                 <legend>Mensagem*</legend>
                 <div class="form__box">
-                    <label for="mensagem">Mensagem</label>
-                    <input type="text" name="mensagem" id="mensagem" minlength="100" maxlength="500" required placeholder="Insira aqui o motivo do contato.">
+                    <label for="mensagem">Mensagem*</label>
+                    <textarea name="mensagem" id="mensagem" minlength="50" maxlength="500" required placeholder="Insira aqui o motivo do contato."></textarea>
+                    <p class="mensagem-erro"></p>
                 </div>
             </fieldset>
             
-            <button type="submit" class="form__botão" id="form__botao">Enviar</button>
+            <button type="submit" class="form__botao" id="form__botao">Enviar</button>
         </form>
     </main>
 

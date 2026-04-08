@@ -9,7 +9,7 @@
     --dark-purple: hsl(255, 45%, 18%);
     --soft-rose: hsl(298, 28%, 68%);
     --white: hsl(0, 0%, 100%);
-    --red: hsl(0, 57%, 41%);
+    --red: hsl(0, 100%, 64%);
 }
 
 body {
@@ -63,7 +63,7 @@ hr {
     font-size: 1.5rem;
 }
 
-.form__box input {
+.form__box input, textarea {
     width: clamp(250px, 100%, 260px);
     height: 50px;
     border-radius: 10px;
@@ -74,12 +74,12 @@ hr {
     width: clamp(250px, 100%, 572px);
 }
 
-.form__box input[name="mensagem"] {
+.form__box textarea[name="mensagem"] {
     width: clamp(250px, 100%, 572px);
     height: 125px;
 }
 
-.form__botão {
+.form__botao {
     background-color: var(--dark-purple);
     color: var(--white);
     border: none;
@@ -93,6 +93,25 @@ hr {
 
 .form:nth-child(3){
     flex-direction: row;
+}
+
+/*Error styles*/
+.mensagem-erro {
+    visibility: hidden;
+    color: var(--red);
+    font-size: 12px;
+}
+
+.form__box.error input {
+    border-color: var(--red);
+}
+
+.form__box.error label {
+    color: var(--red);
+}
+
+.form__box.error .mensagem-erro {
+    visibility: visible;
 }
 
 @media screen and (max-width: 768px){

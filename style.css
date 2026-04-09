@@ -61,7 +61,7 @@ hr {
     display: flex;
     flex-direction: column;
     gap: 0.5rem;
-    margin-bottom: 1.5rem;
+    margin-bottom:;
 }
 
 .form__box label{
@@ -81,7 +81,10 @@ hr {
 
 .form__box input[name="mensagem"] {
     width: clamp(250px, 100%, 572px);
-    height: 125px;
+}
+
+.form__box label[for="celular"] {
+    margin-top: 1rem;
 }
 
 .form__botão {
@@ -93,6 +96,7 @@ hr {
     border-radius: 10px;
     font-size: 1.5rem;
     cursor: pointer;
+    margin-top: 1.5rem;
 }
 
 .form:nth-child(3){

@@ -24,12 +24,14 @@
 
             <div class="form__box">
                 <label for="nome">Nome*</label>
-                <input type="text" name="nome" id="nome">
+                <input type="text" name="nome" id="nome" required  placeholder="Insira aqui seu nome." minlength="3">
+                <p class="mensagem-erro"></p>
             </div>    
                 
             <div class="form__box">
                 <label for="sobrenome">Sobrenome*</label>
-                <input type="text" name="sobrenome" id="sobrenome">
+                <input type="text" name="sobrenome" id="sobrenome" required  placeholder="Insira aqui seu sobrenome." minlength="3">
+                <p class="mensagem-erro"></p>
             </div>
             </fieldset>
             
@@ -38,25 +40,27 @@
 
                 <div class="form__box">
                     <label for="email">Email*</label>
-                    <input type="email" name="email" id="email">
+                    <input type="email" name="email" id="email" required placeholder="email@email.com">
+                    <p class="mensagem-erro"></p>
                 </div>  
             
                 <div class="form__box">
                     <label for="celular">Celular</label>
-                    <input type="tel" name="celular" id="celular">
+                    <input type="tel" name="celular" id="celular" placeholder="(00) 00000-0000" pattern="^\(\d{2}\) 9\d{4}-\d{4}$" minlength="15" maxlength="15">
                 </div>
             </fieldset>    
                 
             
             <fieldset>
-                <legend>Mensagem</legend>
+                <legend>Mensagem*</legend>
                 <div class="form__box">
-                    <label for="mensagem">Mensagem</label>
-                    <input type="text" name="mensagem" id="mensagem">
+                    <label for="mensagem">Mensagem*</label>
+                    <textarea name="mensagem" id="mensagem" minlength="50" maxlength="500" required placeholder="Insira aqui o motivo do contato."></textarea>
+                    <p class="mensagem-erro"></p>
                 </div>
             </fieldset>
             
-            <button type="submit" class="form__botão">Enviar</button>
+            <button type="submit" class="form__botao" id="form__botao">Enviar</button>
         </form>
     </main>
 

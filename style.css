@@ -73,18 +73,26 @@ hr {
     height: 50px;
     border-radius: 10px;
     border-color: var(--dark-purple);
+    border: 1.9px solid var(--dark-purple);
+    padding-left: 0.5rem;
 }
 
-.form__box input[type="email"] {
+.form__box input[type="email"], .form__box textarea[name="mensagem"] {
     width: clamp(250px, 100%, 572px);
 }
 
 .form__box textarea[name="mensagem"] {
-    width: clamp(250px, 100%, 572px);
+    height: 150px;
+    padding-top: 0.5rem;
 }
 
 .form__box label[for="celular"] {
     margin-top: 1rem;
+}
+
+.form__box input:focus, .form__box textarea[name="mensagem"]:focus {
+    outline: none;
+    border-color: var(--soft-rose);
 }
 
 .form__botao {
@@ -97,6 +105,10 @@ hr {
     font-size: 1.5rem;
     cursor: pointer;
     margin-top: 1.5rem;
+}
+
+.form__botao:hover {
+    background-color: var(--soft-rose);
 }
 
 .form:nth-child(3){
@@ -134,7 +146,7 @@ hr {
 
 
 /* Success Page Styles */
-.success__main {
+.success__main, .main__form {
     height: 100vh;
     flex-direction: column;
     justify-content: center;
@@ -170,4 +182,9 @@ hr {
     font-size: 1.25rem;
     cursor: pointer;
     text-align: center;
+}
+
+.success__link:hover {
+    text-decoration: underline;
+    color: var(--soft-rose);
 }

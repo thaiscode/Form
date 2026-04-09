@@ -8,10 +8,10 @@ botao.addEventListener('click', (e) => {
     const email = document.querySelector('#email');
     const mensagem = document.querySelector('#mensagem');
 
-    const valiNome = validate(nome, "Preencha o nome.");
-    const valiSobrenome = validate(sobrenome, "Preencha o sobrenome.");
-    const valiEmail = validate(email, "Preencha o email.");
-    const valiMensagem = validate(mensagem, "Preencha a mensagem.");
+    const valiNome = validate(nome, "Preencha este campo.");
+    const valiSobrenome = validate(sobrenome, "Preencha este campo.");
+    const valiEmail = validate(email, "Preencha este campo.");
+    const valiMensagem = validate(mensagem, "Preencha este campo.");
 
     if (valiNome && valiSobrenome && valiEmail && valiMensagem) {
         window.location.href = "success-page.html";

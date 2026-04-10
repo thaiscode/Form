@@ -1,0 +1,187 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --lavender: hsl(250, 26%, 44%);
+    --dark-purple: hsl(255, 45%, 18%);
+    --soft-rose: hsl(298, 28%, 68%);
+    --white: hsl(0, 0%, 100%);
+    --red: hsl(0, 100%, 64%);
+}
+
+body {
+    font-family: "Inter", sans-serif;
+    background-color: var(--lavender);
+    color: var(--dark-purple);
+    font-size: 16px;
+}
+
+h1 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.flex {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.form {
+    background-color: var(--white);
+    width: clamp(300px, 80%, 700px);
+    max-height: 900px;
+    padding: 4rem;
+    border-radius: 10px;
+    margin: 0 auto;
+}
+
+.form fieldset {
+    border: none;
+}
+
+.form fieldset legend {
+    visibility: hidden;
+}
+
+hr {
+    border-color: var(--soft-rose);
+}
+
+.form__box {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    margin-bottom:;
+}
+
+.form__box label{
+    font-size: 1.5rem;
+}
+
+.form__box input, textarea {
+    width: clamp(250px, 100%, 260px);
+    height: 50px;
+    border-radius: 10px;
+    border-color: var(--dark-purple);
+    border: 1.9px solid var(--dark-purple);
+    padding-left: 0.5rem;
+}
+
+.form__box input[type="email"], .form__box textarea[name="mensagem"] {
+    width: clamp(250px, 100%, 572px);
+}
+
+.form__box textarea[name="mensagem"] {
+    height: 150px;
+    padding-top: 0.5rem;
+}
+
+.form__box label[for="celular"] {
+    margin-top: 1rem;
+}
+
+.form__box input:focus, .form__box textarea[name="mensagem"]:focus {
+    outline: none;
+    border-color: var(--soft-rose);
+}
+
+.form__botao {
+    background-color: var(--dark-purple);
+    color: var(--white);
+    border: none;
+    width: 100%;
+    height: 60px;
+    border-radius: 10px;
+    font-size: 1.5rem;
+    cursor: pointer;
+    margin-top: 1.5rem;
+}
+
+.form__botao:hover {
+    background-color: var(--soft-rose);
+}
+
+.form:nth-child(3){
+    flex-direction: row;
+}
+
+/*Error styles*/
+.mensagem-erro {
+    visibility: hidden;
+    color: var(--red);
+    font-size: 12px;
+}
+
+.form__box.error input, .form__box.error label, .form__box.error textarea {
+    border-color: var(--red);
+}
+
+.form__box.error .mensagem-erro {
+    visibility: visible;
+}
+
+@media screen and (max-width: 768px){
+    .form h1 {
+        text-align: center;
+    }
+    
+    .form {
+        padding: 1.5rem;
+    }
+}
+
+
+/* Success Page Styles */
+.success__main, .main__form {
+    height: 100vh;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;      
+}
+
+.success {
+    text-align: center;
+    margin-bottom: 2rem;
+    background-color: var(--white);
+    width: 350px;
+    height: 290px;
+    padding: 2rem 0;
+    border-radius: 10px;
+}
+
+.success img {
+    width: 100px;
+    height: 100px;
+    margin-bottom: 1rem;
+}
+
+.success h1 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+
+.success p {
+    font-size: 1.25rem;
+}
+
+.success__link {
+    color: var(--white);
+    font-size: 1.25rem;
+    cursor: pointer;
+    text-align: center;
+}
+
+.success__link:hover {
+    text-decoration: underline;
+    color: var(--soft-rose);
+}

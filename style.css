@@ -120,6 +120,7 @@ hr {
 
 .form__box.error input, .form__box.error label, .form__box.error textarea {
     border-color: var(--red);
+    color: var(--red);
 }
 
 .form__box.error .mensagem-erro {
